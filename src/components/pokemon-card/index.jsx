@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
+import { AppContext } from "../../context/provider";
 import TypeItem from "./type-item";
 
 const PokemonCard = ({ props }) => {
+  const [state, setState] = useContext(AppContext);
+
   function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
@@ -38,36 +41,37 @@ const PokemonCard = ({ props }) => {
         return "bg-[#705898]";
       case "dragon":
         return "bg-[#7038f8]";
-        case "steel":
+      case "steel":
         return "bg-[#b8b8d0]";
-        case "dark":
+      case "dark":
         return "bg-[#705848]";
-        case "fairy":
+      case "fairy":
         return "bg-[#e898e8]";
     }
   };
   return (
     <>
       <div
-        className={`w-60 h-80  mx-auto   flex flex-col justify-center items-center overflow-hidden rounded-md shadow-slate-500 shadow-md hover:scale-105 hover:cursor-pointer `}
+        onClick={() => setState({ ...state, pokemonSeleccionado: props })}
+        className={`w-56 h-80  mx-auto  my-4  flex flex-col justify-center items-center overflow-hidden rounded-md shadow-slate-500 shadow-md hover:scale-105 hover:cursor-pointer  
+        )} `}
       >
-        <div className="h-2/3 w-full overflow-hidden flex">
+        <div className="h-2/3 w-full overflow-hidden flex items-center justify-center relative ">
           <div
-            className={`h-72 w-full rounded-b-[48px]  -my-64 ${selectorColores(
+            className={`absolute h-72 w-72 rounded-full opacity-60 -mt-[25rem] ${selectorColores(
               props?.types[0]?.type?.name
-            )}`}
-          >
-            <div className="h-40 w-40 mx-auto my-[19rem] justify-center items-center">
-              <img
-                className="h-40 w-40 "
-                src={props?.sprites?.other["official-artwork"].front_default}
-                alt={props?.id}
-              />
-            </div>
+            )} `}
+          ></div>
+          <div className="h-full w-full  relative flex items-center justify-center ">
+            <img
+              className="h-4/5 w-4/5 "
+              src={props?.sprites?.other?.dream_world.front_default}
+              alt={props?.id}
+            />
           </div>
         </div>
         <div className="h-1/3 w-full flex flex-col items-center">
-          <h1 className="font-bold text-2xl text-stone-900 tracking-wide drop-shadow-lg ">
+          <h1 className="font-bold text-2xl text-stone-900 tracking-wide  ">
             {capitalizeFirstLetter(props?.name)}
           </h1>
           <p className="font-bold text-lg text-gray-900 tracking-wide ">
