@@ -58,7 +58,7 @@ const PokemonCard = ({ props }) => {
       >
         <div className="h-2/3 w-full overflow-hidden flex items-center justify-center relative ">
           <div
-            className={`absolute h-72 w-72 rounded-full opacity-60 -mt-[25rem] ${selectorColores(
+            className={`absolute h-72 w-72 rounded-full opacity-40 -mt-[25rem] ${selectorColores(
               props?.types[0]?.type?.name
             )} `}
           ></div>
@@ -66,18 +66,18 @@ const PokemonCard = ({ props }) => {
             <img
               className="h-4/5 w-4/5 "
               src={props?.sprites?.other?.dream_world.front_default}
+              //  src={props?.sprites?.other?['official-artwork'].front_default}
+
               alt={props?.id}
             />
           </div>
         </div>
-        <div className="h-1/3 w-full flex flex-col items-center">
-          <h1 className="font-bold text-2xl text-stone-900 tracking-wide  ">
+        <div className="h-1/3 w-full flex flex-col justify-center ">
+          <h1 className="font-bold text-2xl text-stone-900 tracking-wide  mx-auto ">
             {capitalizeFirstLetter(props?.name)}
           </h1>
-          <p className="font-bold text-lg text-gray-900 tracking-wide ">
-            #{props?.id}
-          </p>
-          <div className="flex flex-row space-x-5 h-full items-end pb-4">
+
+          <div className="flex flex-row space-x-8 h-full  items-end pb-4 mx-auto -my-1">
             {props?.types.map((type, i) => (
               <TypeItem
                 key={("element-", i)}
@@ -85,6 +85,9 @@ const PokemonCard = ({ props }) => {
               />
             ))}
           </div>
+          <p className="font-bold relative  text-right text-gray-700 mr-2 tracking-wide ">
+            #{props?.id}
+          </p>
         </div>
       </div>
     </>

@@ -6,7 +6,6 @@ import { AppContext } from "../context/provider";
 import endPoints from "../services/api/index";
 
 export default function Home() {
-  const [pokemonArray, setPokemonArray] = useState({});
   const [state, setState] = useContext(AppContext);
 
   const obtenerDatos = async () => {

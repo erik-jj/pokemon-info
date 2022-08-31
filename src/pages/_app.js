@@ -5,7 +5,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <MyProvider>
-        <Component {...pageProps} />;
+        <Component {...pageProps} />
       </MyProvider>
     </>
   );

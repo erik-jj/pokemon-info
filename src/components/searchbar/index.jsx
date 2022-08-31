@@ -22,7 +22,7 @@ const SearchBar = () => {
           type="search"
           maxLength="15"
           onInput={(e) => handleSearch(e.target.value)}
-          placeholder="Buscar "
+          placeholder="Buscar Pokémon"
         ></input>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +30,7 @@ const SearchBar = () => {
           viewBox="0 0 24 24"
           strokeWidth={1.7}
           stroke="currentColor"
-          className="w-7 h-7 stroke-blue-500 bg-white"
+          className="w-7 h-7 stroke-white bg-blue-300"
         >
           <path
             strokeLinecap="round"

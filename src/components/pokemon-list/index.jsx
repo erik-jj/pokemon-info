@@ -9,15 +9,15 @@ const PokemonList = () => {
   const [state] = useContext(AppContext);
   const { pokemonList, pokemonSeleccionado, busqueda } = state;
   const noMatching = false;
-
+  const [load, setLoad] = useState(true);
   return (
     <>
       {pokemonSeleccionado !== undefined && <PokemonModal />}
 
-      <div className=" flex w-[90vw] justify-center mx-auto overflow-x-hidden pt-4 flex-col  ">
+      <div className=" flex w-full justify-center mx-auto overflow-x-hidden pt-4 flex-col px-2  ">
         <SearchBar />
-        <NoMatch />
-        <div className="max-w-7xl h-full grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2  gap-4  mx-auto bg-white z-10  ">
+        {pokemonList?.length > 0 && busqueda.length > 0 && <NoMatch />}
+        <div className="max-w-7xl w-full h-full grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2  gap-3  mx-auto bg-white z-10  ">
           {pokemonList?.map((pokemon) => {
             if (pokemon.name.toLowerCase().includes(busqueda?.toLowerCase())) {
               return (
