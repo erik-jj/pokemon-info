@@ -17,7 +17,7 @@ const PokemonList = () => {
       <div className=" flex w-full justify-center mx-auto overflow-x-hidden pt-4 flex-col px-2  ">
         <SearchBar />
         {pokemonList?.length > 0 && busqueda.length > 0 && <NoMatch />}
-        <div className="max-w-7xl w-full h-full grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2  gap-3  mx-auto bg-white z-10  ">
+        <div className="max-w-7xl w-full h-full grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-3 mx-auto bg-white z-10  ">
           {pokemonList?.map((pokemon) => {
             if (pokemon.name.toLowerCase().includes(busqueda?.toLowerCase())) {
               return (

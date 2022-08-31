@@ -53,12 +53,12 @@ const PokemonCard = ({ props }) => {
     <>
       <div
         onClick={() => setState({ ...state, pokemonSeleccionado: props })}
-        className={`w-56 h-80  mx-auto  my-4  flex flex-col justify-center items-center overflow-hidden rounded-md shadow-slate-500 shadow-md hover:scale-105 hover:cursor-pointer  
+        className={`w-44 h-72 md:w-56 md:h-80  mx-auto  my-4  flex flex-col justify-center items-center overflow-hidden rounded-md shadow-slate-500 shadow-md hover:scale-105 hover:cursor-pointer  
         )} `}
       >
         <div className="h-2/3 w-full overflow-hidden flex items-center justify-center relative ">
           <div
-            className={`absolute h-72 w-72 rounded-full opacity-40 -mt-[25rem] ${selectorColores(
+            className={`absolute h-72 w-72 rounded-full opacity-40 -mt-[25rem]  ${selectorColores(
               props?.types[0]?.type?.name
             )} `}
           ></div>
