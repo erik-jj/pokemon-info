@@ -21,7 +21,7 @@ const PokemonDetail = () => {
           } #${pokemonSeleccionado?.id}`}</span>
           <div className=" flex flex-col md:flex-row justify-center md:gap-10 gap-2 items-center w-full h-full">
             <img
-              className=" w-52 h-52 md:w-60 md:h-60 rendering-pixelated"
+              className=" w-52 h-52 md:w-60 md:h-60"
               src={
                 pokemonSeleccionado?.sprites?.other["official-artwork"] ?.front_default
                 //pokemonSeleccionado?.sprites?.versions["generation-v"]["black-white"].animated?.front_default
