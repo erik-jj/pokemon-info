@@ -12,10 +12,10 @@ export default function Home() {
   const obtenerDatos = async () => {
     let dataArray = [];
     for (let i = 1; i <= 151; i++) {
-      const response = await axios(endPoints.pokemon.getPokemon(i));
+      const response = await axios.get(endPoints.pokemon.getPokemon(i));
       dataArray.push(response.data);
     }
-    setState({ ...state, pokemonList: dataArray });
+    setState({ ...state, busqueda: "", pokemonList: dataArray });
   };
 
   useEffect(() => {
