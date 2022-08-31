@@ -65,7 +65,10 @@ const PokemonCard = ({ props }) => {
           <div className="h-full w-full  relative flex items-center justify-center ">
             <img
               className="h-4/5 w-4/5 "
-              src={props?.sprites?.other?.dream_world.front_default}
+              src={props?.sprites?.other?.dream_world.front_default   }
+               // props?.sprites?.versions["generation-v"]["black-white"]/.front_default
+           
+              // src={}
               //  src={props?.sprites?.other?['official-artwork'].front_default}
 
               alt={props?.id}

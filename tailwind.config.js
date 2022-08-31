@@ -7,5 +7,9 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [],
+  variants: {
+    imageRendering: ["responsive"],
+  },
+  plugins: [require("tailwindcss-image-rendering")()],
 };
+
