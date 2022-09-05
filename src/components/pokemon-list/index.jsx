@@ -21,7 +21,7 @@ const PokemonList = () => {
   const obtenerDatos = async () => {
     let dataArray = [];
     setLoading(true);
-    for (let i = 1; i <= 151; i++) {
+    for (let i = 1; i <= 15; i++) {
       const response = await axios.get(endPoints.pokemon.getPokemon(i));
       dataArray.push(response.data);
     }
