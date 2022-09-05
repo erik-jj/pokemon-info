@@ -30,7 +30,7 @@ const SearchBar = () => {
           viewBox="0 0 24 24"
           strokeWidth={1.7}
           stroke="currentColor"
-          className="w-7 h-7 stroke-white bg-blue-300"
+          className="w-7 h-7 stroke-white bg-gray-400"
         >
           <path
             strokeLinecap="round"
