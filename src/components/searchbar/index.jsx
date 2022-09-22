@@ -22,7 +22,7 @@ const SearchBar = () => {
           type="search"
           maxLength="15"
           onInput={(e) => handleSearch(e.target.value)}
-          placeholder="Buscar Pokémon"
+          placeholder="Search Pokémon"
         ></input>
         <svg
           xmlns="http://www.w3.org/2000/svg"

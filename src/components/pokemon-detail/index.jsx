@@ -29,15 +29,15 @@ const PokemonDetail = () => {
               alt={pokemonSeleccionado?.name}
             />
             <div className="flex flex-col ">
-              <p className="text-xl font-bold tracking-wide text-black">{`Características:`}</p>
-              <p className="text-md italic  text-gray-700">{`Peso: ${pokemonSeleccionado?.height}kg`}</p>
-              <p className="text-md italic  text-gray-700">{`Altura: ${pokemonSeleccionado?.weight}cm`}</p>
+              <p className="text-xl font-bold tracking-wide text-black">{`Characteristics:`}</p>
+              <p className="text-md italic  text-gray-700">{`Height: ${pokemonSeleccionado?.height/10}m`}</p>
+              <p className="text-md italic  text-gray-700">{`Wight: ${pokemonSeleccionado?.weight/10}kg`}</p>
             </div>
           </div>
 
           <div className="md:max-w-lg w-full md:w-3/4 lg:w-5/6 xl:w-2/3 mx-auto ">
             <p className="text-xl font-bold tracking-wide text-black pb-1">
-              Estadísticas:
+              Stats:
             </p>
             <ul className="bg-slate-600  flex flex-row  items-start justify-center md:justify-between  gap-2 rounded-md  overflow-x-auto  mx-auto ">
             <li className="my-1 py-1 flex justify-center items-center flex-col">
@@ -51,7 +51,7 @@ const PokemonDetail = () => {
                 </div>
                 <div className="flex justify-center  text-center md:w-16 w-12 ">
                   <span className="text-xs md:text-md font-bold text-white  font-mono ">
-                    PS
+                    HP
                   </span>
                 </div>
               </li>
@@ -66,7 +66,7 @@ const PokemonDetail = () => {
                 </div>
                 <div className="flex justify-center  text-center md:w-16 w-12 ">
                   <span className="text-xs md:text-md font-bold text-white  font-mono ">
-                    Ataque
+                    Atk.
                   </span>
                 </div>
               </li>
@@ -81,7 +81,7 @@ const PokemonDetail = () => {
                 </div>
                 <div className="flex justify-center  text-center md:w-16 w-12 ">
                   <span className="text-xs md:text-md font-bold text-white  font-mono ">
-                    Defensa
+                    Def.
                   </span>
                 </div>
               </li>
@@ -96,7 +96,7 @@ const PokemonDetail = () => {
                 </div>
                 <div className="flex justify-center  text-center md:w-16 w-12 ">
                   <span className="text-xs md:text-md font-bold text-white  font-mono ">
-                    Ataque Esp.
+                    Sp. Atk.
                   </span>
                 </div>
               </li>
@@ -111,7 +111,7 @@ const PokemonDetail = () => {
                 </div>
                 <div className="flex justify-center  text-center md:w-16 w-12 ">
                   <span className="text-xs md:text-md font-bold text-white  font-mono ">
-                    Defensa Esp.
+                    Sp. Def.
                   </span>
                 </div>
               </li>
@@ -126,7 +126,7 @@ const PokemonDetail = () => {
                 </div>
                 <div className="flex justify-center  text-center md:w-16 w-12 ">
                   <span className="text-xs md:text-md font-bold text-white  font-mono ">
-                    Velocidad
+                    Spd.
                   </span>
                 </div>
               </li>

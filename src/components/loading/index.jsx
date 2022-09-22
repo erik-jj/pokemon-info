@@ -48,7 +48,7 @@ const Loading = () => {
             </svg>
           </x-loading>
           <div className="mt-3 text-gray-900 font-mono text-sm sm:text-md">
-            Cargando datos...
+            Loading data...
           </div>
         </div>
       </div>
