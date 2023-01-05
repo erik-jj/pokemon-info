@@ -12,21 +12,20 @@ const PokemonList = () => {
   const [state, setState] = useContext(AppContext);
   const { pokemonSeleccionado, busqueda } = state;
   const [pokemonList, setPokemonList] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
+
   useEffect(() => {
     document.title = "PokeDex";
     obtenerDatos();
   }, []);
 
   const obtenerDatos = async () => {
-    let dataArray = [];
     setLoading(true);
-    for (let i = 1; i <= 20; i++) {
+    for (let i = 1; i <= 151; i++) {
       const response = await axios.get(endPoints.pokemon.getPokemon(i));
-      dataArray.push(response.data);
+      setPokemonList((pokemonList) => [...pokemonList, response.data]);
+      setLoading(false);
     }
-    setPokemonList(dataArray);
-    setLoading(false);
   };
 
   return (
